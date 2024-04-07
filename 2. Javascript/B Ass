@@ -1,0 +1,8 @@
+B. Perform sorting of an array in descending order.
+
+function sortDescending(arr) {
+    return arr.sort((a, b) => b - a);
+}
+let numbers = [4, 2, 7, 1, 9, 3];
+let sortedDescending = sortDescending(numbers);
+console.log(sortedDescending);
