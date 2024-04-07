@@ -1,0 +1,39 @@
+B. Enter a Roman Number as input and convert it to an integer. (ex IX = 9)
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class RomanToInteger {
+    private static final Map<Character, Integer> romanValues = new HashMap<>();
+
+    static {
+        romanValues.put('I', 1);
+        romanValues.put('V', 5);
+        romanValues.put('X', 10);
+        romanValues.put('L', 50);
+        romanValues.put('C', 100);
+        romanValues.put('D', 500);
+        romanValues.put('M', 1000);
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a Roman numeral: ");
+        String romanNumeral = scanner.nextLine().toUpperCase();
+        int result = romanToInt(romanNumeral);
+        System.out.println("Integer equivalent: " + result);
+        scanner.close();
+    }
+
+    public static int romanToInt(String s) {
+        int result = 0;
+        int prevValue = 0;
+        for (int i = s.length() - 1; i >= 0; i--) {
+            int currValue = romanValues.get(s.charAt(i));
+            result += (currValue < prevValue) ? -currValue : currValue;
+            prevValue = currValue;
+        }
+        return result;
+    }
+}
