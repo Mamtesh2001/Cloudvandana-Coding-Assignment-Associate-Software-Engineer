@@ -1,0 +1,16 @@
+CSS file
+
+#calculator {
+    width: max-content;
+    background-color: grey;
+    padding: 10px;
+}
+
+#result {
+    background-color: white;
+    color: black;
+    padding: 10px;
+}
+
+/* Style your buttons here */
+/* ... */
