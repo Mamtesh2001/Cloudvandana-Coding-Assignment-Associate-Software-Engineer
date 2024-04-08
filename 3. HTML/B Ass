@@ -1,0 +1,95 @@
+B. Create a survey form with Fields; First Name, Last Name, Date of Birth, Country (dropdown), Gender (checkbox), Profession, email, and mobile number. All the input fields are necessary to submit the form. Create two buttons Submit and Reset. Reset will reset the form while clicking on submit, first, it will check all the fields and necessary validations and then a popup will appear displaying all the selected values with the label in front of it. On closing the popup, the form should reset all the values.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Survey Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        #survey-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form id="survey-form">
+        <h1>Customer Survey Form</h1>
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" required>
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" required>
+
+        <label for="country">Country:</label>
+        <select id="country" required>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <!-- Add more country options here -->
+        </select>
+
+        <label>Gender:</label>
+        <input type="checkbox" id="male" value="Male">
+        <label for="male">Male</label>
+        <input type="checkbox" id="female" value="Female">
+        <label for="female">Female</label>
+
+        <label for="profession">Profession:</label>
+        <input type="text" id="profession" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" required>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+</html>
