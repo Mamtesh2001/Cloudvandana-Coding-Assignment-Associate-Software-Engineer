@@ -1,0 +1,32 @@
+A. Create a basic calculator using HTML, CSS, and JavaScript with the functionality of add, subtract, multiply and divide. Use the following picture for reference.
+
+html file:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Basic Calculator</title>
+</head>
+<body>
+    <div id="calculator">
+        <div id="result">0</div>
+        <button onclick="clearResult()">AC</button>
+        <button onclick="appendToResult('1')">1</button>
+        <button onclick="appendToResult('2')">2</button>
+        <button onclick="appendToResult('3')">3</button>
+        <button onclick="appendToResult('+')">+</button>
+        <button onclick="appendToResult('4')">4</button>
+        <button onclick="appendToResult('5')">5</button>
+        <button onclick="appendToResult('6')">6</button>
+        <button onclick="appendToResult('-')">−</button>
+        <!-- Using − for the minus sign to match the design -->
+        <!-- Add more buttons here following the pattern above -->
+        <!-- ... -->
+        <!-- End of buttons -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
